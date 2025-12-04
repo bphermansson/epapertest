@@ -18,10 +18,18 @@ void InitialiseDisplay() {
 }
 void drawString(int x, int y, String text)
 {
+    //Clear
+    display.fillScreen(GxEPD_WHITE);
+    display.fillScreen(GxEPD_WHITE); // vissa 3-färg behöver två
+    display.nextPage();
     int16_t x1, y1; // the bounds of x,y and w and h of the variable 'text' in pixels.
     uint16_t w, h;
     display.setTextWrap(false);
     display.getTextBounds(text, x, y, &x1, &y1, &w, &h);
     u8g2Fonts.setCursor(x, y + h);
     u8g2Fonts.print(text);
+    // Important use bring the display in one of the two modes to
+    // avoid a damage of the display that cannot get repaired.
+    //display.powerOff();
+    display.hibernate();
 }
