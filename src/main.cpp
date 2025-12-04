@@ -1,6 +1,4 @@
 #include <SPI.h>
-#include <GxEPD2_3C.h>
-#include <U8g2_for_Adafruit_GFX.h>  // https://github.com/olikraus/U8g2_for_Adafruit_GFX
 #include "epaper.h"
 #define ENABLE_GxEPD2_display 0
 
