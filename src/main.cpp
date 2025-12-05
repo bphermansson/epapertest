@@ -10,14 +10,12 @@ void setup() {
   const uint8_t startX = 3;
   const uint8_t startY = 30;
   const char *DISPLAY_TEXT = "Hello world!";
-
   drawString(startX, startY + 0 * distance, DISPLAY_TEXT);
-  display.display(false); // Full screen update mode
   delay(5000);
+
   u8g2Fonts.setFont(u8g2_font_helvB14_tf);
   const char *DISPLAY_TEXT2 = "The answer is 42";
   drawString(startX, startY + 0 * distance, DISPLAY_TEXT2);
-  display.display(false); // Full screen update mode
 }
 
 void loop() {

@@ -28,6 +28,7 @@ void drawString(int x, int y, String text)
     display.getTextBounds(text, x, y, &x1, &y1, &w, &h);
     u8g2Fonts.setCursor(x, y + h);
     u8g2Fonts.print(text);
+    display.display(false); // Full screen update mode
     // Important use bring the display in one of the two modes to
     // avoid a damage of the display that cannot get repaired.
     //display.powerOff();
