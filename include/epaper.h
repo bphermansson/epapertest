@@ -22,4 +22,5 @@ extern GxEPD2_3C<GxEPD2_213_Z98c, GxEPD2_213_Z98c::HEIGHT> display;
 extern U8G2_FOR_ADAFRUIT_GFX u8g2Fonts; // Select u8g2 font from here: https://github.com/olikraus/u8g2/wiki/fntlistall
 
 void InitialiseDisplay();
+void clearScreen();
 void drawString(int x, int y, String text);

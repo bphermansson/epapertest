@@ -13,6 +13,7 @@ void setup() {
   drawString(startX, startY + 0 * distance, DISPLAY_TEXT);
   delay(5000);
 
+  clearScreen();
   u8g2Fonts.setFont(u8g2_font_helvB14_tf);
   const char *DISPLAY_TEXT2 = "The answer is 42";
   drawString(startX, startY + 0 * distance, DISPLAY_TEXT2);

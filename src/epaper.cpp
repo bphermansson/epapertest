@@ -16,12 +16,13 @@ void InitialiseDisplay() {
   display.fillScreen(GxEPD_WHITE);
   display.setFullWindow();
 }
-void drawString(int x, int y, String text)
-{
-    //Clear
+void clearScreen(){
     display.fillScreen(GxEPD_WHITE);
     display.fillScreen(GxEPD_WHITE); // vissa 3-färg behöver två
     display.nextPage();
+}
+void drawString(int x, int y, String text)
+{
     int16_t x1, y1; // the bounds of x,y and w and h of the variable 'text' in pixels.
     uint16_t w, h;
     display.setTextWrap(false);
